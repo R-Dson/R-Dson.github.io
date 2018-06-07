@@ -4,6 +4,8 @@ body{
     background: rgba(26,26,26, 1);
     color: white;
     scroll-behavior: smooth;
+    overflow-x:hidden; 
+    -webkit-overflow-scrolling: touch;
 }
 
 header
