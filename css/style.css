@@ -24,18 +24,14 @@ header
 main
 {
     margin: auto;
+    width: 70%;
 }
 
-footer
-{
-
-}
-
-header:hover
+/* header:hover
 {
     transform: rotate(0deg);
     
-}
+} */
 header a
 {
     font-size: 25px;
@@ -60,7 +56,7 @@ header a:hover
 #introdiv
 {
     margin: auto;
-    width: 70%;
+    /* width: 70%; */
     /* position: relative; */
     height: 100%;
     animation: 2s ease-out 0s 1 fadeintext, slideInFromLeft 1s;
@@ -103,12 +99,7 @@ span
     float: left;
     width: 19%;
     border-left: 1px solid black;
-    /* transition: slideInFromLeft 1.2s ease;
-    transition-property: slideInFromLeft;
-    transition-duration: 1.2s;
-    transition-timing-function: ease;
-    transition-delay: initial; */
-    animation: 1s ease-out 0s 1 slideInFromTop;
+    animation: 1.5s ease-out 0s 1 slideInFromTop;
     height: 100vh;
 }
 #nav
@@ -119,7 +110,6 @@ span
 
 #aboutdiv
 {
-    width: 70%;
     margin: auto;
     height: 100%;
 }
@@ -136,7 +126,6 @@ span
 .aboutmeinfo
 {
     float: left;
-    /* margin: auto; */
     font-size: 20px;
     line-height: 25px;
     vertical-align: middle;
@@ -153,7 +142,6 @@ span
     float: right;
     list-style-type: none;
     margin-right: 10%;
-    /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); */
     box-shadow: 0 0 25px rgba(121, 206, 255, 0.3);
     padding: 20px;
     background-color: rgba(26,26,26, 1);
@@ -169,6 +157,58 @@ span
     margin-bottom: 10px;
 }
 
+#foliodiv
+{
+    margin: 0 auto;
+}
+
+/* shared properties folio items */
+#folioitem1, #folioitem2, #folioitem3 
+{
+    height: 700px;
+    margin-bottom: 150px;
+    box-shadow: 0 0 25px rgba(255,255,255, 0.2);
+
+}
+
+/* Odd folio items */
+#folioitem1, #folioitem3 
+{
+    
+    /* box-shadow: 0 0 25px rgba(255, 82, 82, 0.3); */
+}
+/* Even folio items */
+#folioitem2
+{
+    /* box-shadow: 0 0 25px rgba(121, 206, 255, 0.3); */
+
+}
+
+#folioitem1
+{
+    background: url("https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/himmelen-simple-wordpress-travel-template.jpg") no-repeat center center fixed;
+    background-size:70% 100vh;
+
+}
+
+#folioitem2
+{
+    background: url("https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/inheritingthenations-education-website-wix-example.jpg") no-repeat center center fixed;
+    background-size:70% 100vh;
+
+}
+
+#folioitem3
+{
+    background: url("https://i.pinimg.com/originals/7c/7c/39/7c7c39195fddd611d7a0781fe45ad42d.jpg") no-repeat center center fixed;
+    background-size:70% 100vh;
+
+}
+
+#interesteddiv
+{
+    height: 250px;
+}
 
 /* Animations */
 @keyframes slideInFromTop {
