@@ -6,6 +6,7 @@ body{
     scroll-behavior: smooth;
     overflow-x:hidden; 
     -webkit-overflow-scrolling: touch;
+    
 }
 
 header
@@ -15,10 +16,20 @@ header
     transition-duration: 1.5s;
     line-height: 20px;
     display:block;
-    margin-top: 17%;
+    margin-top: 400px;
+    margin-right: -175px;
     right: 1%;
-    background-color: rgba(26,26,26, 0.8);
+    /*background-color: rgba(26,26,26, 0.8);*/
     padding: 10px;
+}
+footer{
+    text-align: center;
+}
+
+footer #nav2{
+    transition-duration: 1.5s;
+    margin-top: -150px;
+    animation: 2s ease-out 0s 1 fadeintext, slideInFromTop 0.75s;
 }
 
 main
@@ -26,21 +37,20 @@ main
     margin: auto;
     width: 70%;
 }
+h3{
+    font-family: "Inconsolata", monospace;
+}
 
-/* header:hover
-{
-    transform: rotate(0deg);
-    
-} */
-header a
+header a, footer a
 {
     font-size: 25px;
     text-decoration: none;
     transition: 0.5s;  
     color: white;
     animation: 2s ease-out 0s 1 fadeintext;
+    font-family: "Inconsolata", monospace;
 }
-header a:hover
+header a:hover, #github:hover
 {
     color: #FF5252;
 }
@@ -59,7 +69,7 @@ header a:hover
     /* width: 70%; */
     /* position: relative; */
     height: 100%;
-    animation: 2s ease-out 0s 1 fadeintext, slideInFromLeft 1s;
+    animation: 2s ease-out 0s 1 fadeintext, slideInFromLeft 0.75s;
     z-index: 1;
 }
 #introdiv h4
@@ -102,10 +112,16 @@ span
     animation: 1.5s ease-out 0s 1 slideInFromTop;
     height: 100vh;
 }
+#info{
+    border: 1px solid black;
+    padding: 5px;
+}
 #nav
 {
+    background: rgba(0, 0, 0, 0);
     z-index: 1000;
     animation: 1s slideInFromRight;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.74);
 }
 
 #aboutdiv
@@ -114,12 +130,12 @@ span
     height: 100%;
 }
 
-#aboutdiv h4
+#aboutdiv h4, #foliodiv h4
 {
     position: relative;
     font-size: 100px;
     line-height: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     left: 10%;
 }
 
@@ -131,22 +147,22 @@ span
     vertical-align: middle;
     width: 50%;
     background-color: rgba(26,26,26, 1);
-    box-shadow: 0 0 25px rgba(255, 82, 82, 0.3);
     padding: 20px;
     margin-bottom: 100px;
+    animation: 1.5s ease-out 0s 1 colorChange;
 }
 
 .skillsdiv
 {
-    
     float: right;
     list-style-type: none;
     margin-right: 10%;
-    box-shadow: 0 0 25px rgba(121, 206, 255, 0.3);
-    padding: 20px;
+    /*box-shadow: 0 0 25px rgba(121, 206, 255, 0.3);
+    */padding: 20px;
     background-color: rgba(26,26,26, 1);
     width: 50%;
     margin-bottom: 100px;
+    border: 1px solid black;
 }
 .skillsdiv h3{
     font-size: 35px;
@@ -159,6 +175,7 @@ span
 
 #foliodiv
 {
+    padding-top: 100px;
     margin: 0 auto;
 }
 
@@ -167,8 +184,8 @@ span
 {
     height: 700px;
     margin-bottom: 150px;
-    box-shadow: 0 0 25px rgba(255,255,255, 0.2);
-
+    box-shadow: 0 0 12px rgb(12, 12, 12);
+    border-radius: 4px;
 }
 
 /* Odd folio items */
@@ -227,6 +244,14 @@ span
         opacity: 100;
     }
 }
+@keyframes fadeOutText{
+    from{
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
@@ -241,6 +266,14 @@ span
     }
     100% {
         transform: translateY(0%);
+    }
+}
+@keyframes colorChange{
+    0%{
+        padding: 20px;
+        margin-bottom: 100px;
+    }
+    100%{
     }
 }
 
